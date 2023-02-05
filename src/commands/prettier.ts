@@ -1,32 +1,47 @@
-import {Command, Flags} from '@oclif/core'
-import {pkgUpSync} from 'pkg-up'
-import {exitWithError, verboseExecSync, writeNextToPackageJson} from '../utils'
+import { Command, Flags } from '@oclif/core';
+import {
+  exitWithError,
+  pkgUpSync,
+  verboseExecSync,
+  writeNextToPackageJson,
+} from '../utils';
 
 export default class Prettier extends Command {
-  static description = 'setup prettier basic config'
+  static description = 'setup prettier basic config';
 
-  static examples = [
-    '<%= config.bin %> <%= command.id %>',
-  ]
+  static examples = ['<%= config.bin %> <%= command.id %>'];
 
   static flags = {
-    client: Flags.string({char: 'c', description: 'npm client to use', default: 'pnpm'}),
-    skip: Flags.boolean({description: 'skip package install', default: false}),
-  }
+    client: Flags.string({
+      char: 'c',
+      description: 'npm client to use',
+      default: 'pnpm',
+    }),
+    skip: Flags.boolean({
+      description: 'skip package install',
+      default: false,
+    }),
+  };
 
-  static args = {}
+  static args = {};
 
   public async run(): Promise<void> {
-    const {flags} = await this.parse(Prettier)
+    const { flags } = await this.parse(Prettier);
 
-    const pkgPath = pkgUpSync()
+    const pkgPath = pkgUpSync();
     if (pkgPath) {
+      verboseExecSync(flags.client, [
+        'install',
+        'prettier',
+        'prettier-plugin-organize-imports',
+        'prettier-plugin-packagejson',
+        '--save-dev',
+      ]);
 
-      verboseExecSync(flags.client, ['install', 'prettier', 'prettier-plugin-organize-imports',
-        'prettier-plugin-packagejson', '--save-dev',
-      ])
-
-      writeNextToPackageJson(pkgPath, '.prettierrc.js', `
+      writeNextToPackageJson(
+        pkgPath,
+        '.prettierrc.js',
+        `
 module.exports = {
   printWidth: 80,
   singleQuote: true,
@@ -38,16 +53,18 @@ module.exports = {
     require.resolve("prettier-plugin-organize-imports"),
   ],
 };
-`)
-      writeNextToPackageJson(pkgPath, '.prettierignore', `
+`.trimStart(),
+      );
+      writeNextToPackageJson(
+        pkgPath,
+        '.prettierignore',
+        `
 node_modules
 dist
-`,
-      )
-
+`.trimStart(),
+      );
     } else {
-      exitWithError('cant find package.json from current directory')
+      exitWithError('cant find package.json from current directory');
     }
-
   }
 }

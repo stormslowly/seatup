@@ -20,8 +20,8 @@
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.2.4",
-    "execa": "^6.1.0",
-    "pkg-up": "^4.0.0"
+    "execa": "^5",
+    "pkg-up": "^3"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.3",
