@@ -1,6 +1,11 @@
 {
-  "extends": [
-    "oclif",
-    "oclif-typescript"
-  ]
+  "extends": ["oclif", "oclif-typescript"],
+  "plugins": ["prettier"],
+  "rules": {
+    "unicorn/prefer-node-protocol": "off",
+    "object-curly-spacing": "off",
+    "semi": "off",
+    "lines-between-class-members": "off",
+    "unicorn/import-style": "off"
+  }
 }

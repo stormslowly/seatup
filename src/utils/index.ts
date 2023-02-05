@@ -1,13 +1,9 @@
 import { sync as execaSync } from 'execa';
 import { writeFileSync } from 'fs';
 import { dirname, join } from 'path';
-import * as pkgUp from 'pkg-up';
+import { sync as pkgUpSync } from 'pkg-up';
 
-export function errorLog() {}
-
-const pkgUpSync = pkgUp.sync;
-
-export { pkgUpSync, pkgUp };
+export { pkgUpSync };
 
 export function verboseExecSync(file: string, args?: readonly string[]) {
   execaSync(file, args, {
@@ -17,6 +13,7 @@ export function verboseExecSync(file: string, args?: readonly string[]) {
 
 export function exitWithError(errorMessage: string) {
   console.error(errorMessage);
+  // eslint-disable-next-line no-process-exit,unicorn/no-process-exit
   process.exit(-1);
 }
 
