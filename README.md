@@ -3,11 +3,10 @@ oclif-hello-world
 
 oclif example Hello World CLI
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/seatup.svg)](https://npmjs.org/package/seatup)
-[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
+[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/stormslowly/seatup/tree/master)
+[![Downloads/week](https://img.shields.io/npm/dw/seatup.svg)](https://npmjs.org/package/seatup)
+[![License](https://img.shields.io/npm/l/seatup.svg)](https://github.com/stormslowly/seatup/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
