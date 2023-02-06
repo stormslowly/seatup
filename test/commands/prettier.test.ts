@@ -1,1 +1,3 @@
-describe('prettier', () => {});
+describe.skip('prettier', () => {
+  it.skip('run prettier install');
+});
