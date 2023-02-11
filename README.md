@@ -1,7 +1,7 @@
 Seatup
 =================
 
-![logo-slogan]()
+![logo-slogan](https://raw.githubusercontent.com/stormslowly/seatup/master/logos/logo-slogan.png)
 
 
 [![Version](https://img.shields.io/npm/v/seatup.svg)](https://npmjs.org/package/seatup)
