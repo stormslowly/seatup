@@ -1,7 +1,8 @@
-oclif-hello-world
+Seatup
 =================
 
-oclif example Hello World CLI
+![logo-slogan]()
+
 
 [![Version](https://img.shields.io/npm/v/seatup.svg)](https://npmjs.org/package/seatup)
 [![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/stormslowly/seatup/tree/master)
