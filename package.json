@@ -2,20 +2,34 @@
   "name": "seatup",
   "version": "1.0.0-alpha.1",
   "description": "setup basic config util",
+  "keywords": [
+    "oclif"
+  ],
+  "homepage": "https://github.com/stormslowly/seatup",
+  "bugs": "https://github.com/stormslowly/seatup/issues",
+  "repository": "stormslowly/seatup",
+  "license": "MIT",
   "author": "pshu",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "setup": "./bin/run"
   },
-  "homepage": "https://github.com/stormslowly/seatup",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "repository": "stormslowly/seatup",
   "files": [
     "/bin",
     "/dist",
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "posttest": "yarn lint",
+    "version": "oclif readme && git add README.md"
+  },
   "dependencies": {
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
@@ -44,36 +58,17 @@
     "tslib": "^2.5.0",
     "typescript": "^4.9.5"
   },
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "oclif": {
     "bin": "setup",
     "dirname": "setup",
     "commands": "./dist/commands",
     "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@oclif/plugin-help"
     ],
     "topicSeparator": " ",
-    "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
-      }
-    }
-  },
-  "scripts": {
-    "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint . --ext .ts --config .eslintrc",
-    "postpack": "shx rm -f oclif.manifest.json",
-    "posttest": "yarn lint",
-    "prepack": "yarn build && oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
-  },
-  "engines": {
-    "node": ">=12.0.0"
-  },
-  "bugs": "https://github.com/stormslowly/seatup/issues",
-  "keywords": [
-    "oclif"
-  ],
-  "types": "dist/index.d.ts"
+    "topics": {}
+  }
 }
