@@ -35,13 +35,15 @@
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.3.0",
     "execa": "^5",
-    "pkg-up": "^3"
+    "pkg-up": "^3",
+    "shelljs": "^0.8.5"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.5",
     "@types/chai": "^4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.18.11",
+    "@types/shelljs": "^0.8.11",
     "chai": "^4",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4",
