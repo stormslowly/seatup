@@ -24,6 +24,5 @@ export default class Global extends Command {
     if (!content.includes('*.seatup')) {
       fs.writeFileSync(gitignore, `${content}\n*.seatup`);
     }
-    return;
   }
 }
