@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@oclif/core": "^2",
+    "@oclif/plugin-autocomplete": "^2.1.0",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.3.0",
     "execa": "^5",
@@ -68,7 +69,8 @@
     "dirname": "setup",
     "commands": "./dist/commands",
     "plugins": [
-      "@oclif/plugin-help"
+      "@oclif/plugin-help",
+      "@oclif/plugin-autocomplete"
     ],
     "topicSeparator": " ",
     "topics": {}
