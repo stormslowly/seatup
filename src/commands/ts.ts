@@ -6,7 +6,7 @@ export default class Ts extends Command {
 
   static examples = ['<%= config.bin %> <%= command.id %>'];
 
-  static aliases = ['typescript', 'tsc'];
+  static aliases = ['typescript'];
   public async run(): Promise<void> {
     const pkgPath = pkgUpSync();
     assert(pkgPath, 'No package.json Not found');
