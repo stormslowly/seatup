@@ -6,6 +6,7 @@
     "object-curly-spacing": "off",
     "semi": "off",
     "lines-between-class-members": "off",
-    "unicorn/import-style": "off"
+    "unicorn/import-style": "off",
+    "indent": "off"
   }
 }
