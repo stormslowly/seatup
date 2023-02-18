@@ -37,8 +37,9 @@ export class NpmProjectUtil {
     this.pkgJSON = require(pkgPath);
   }
 
-  writeFileToRoot(f: string, content: string): void {
+  writeFileToRoot(f: string, content: string): this {
     writeFileSync(join(this.projectPath, f), content);
+    return this;
   }
 
   copyTpl(tplPath: string, to: string): void {

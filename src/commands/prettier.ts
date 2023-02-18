@@ -1,45 +1,22 @@
-import { Command, Flags } from '@oclif/core';
-import {
-  exitWithError,
-  pkgUpSync,
-  verboseExecSync,
-  writeNextToPackageJson,
-} from '../utils';
+import { Command } from '@oclif/core';
+import { assert, NpmProjectUtil, pkgUpSync } from '../utils';
 
 export default class Prettier extends Command {
   static description = 'setup prettier basic config';
 
   static examples = ['<%= config.bin %> <%= command.id %>'];
 
-  static flags = {
-    client: Flags.string({
-      char: 'c',
-      description: 'npm client to use',
-      default: 'pnpm',
-    }),
-    skip: Flags.boolean({
-      description: 'skip package install',
-      default: false,
-    }),
-  };
-
-  static args = {};
-
   public async run(): Promise<void> {
-    const { flags } = await this.parse(Prettier);
-
     const pkgPath = pkgUpSync();
-    if (pkgPath) {
-      verboseExecSync(flags.client, [
-        'install',
-        'prettier',
-        'prettier-plugin-organize-imports',
-        'prettier-plugin-packagejson',
-        '--save-dev',
-      ]);
+    assert(pkgPath, 'cant find package.json from current directory');
 
-      writeNextToPackageJson(
-        pkgPath,
+    const projectUtil = new NpmProjectUtil(pkgPath);
+
+    projectUtil
+      .addDevDeps('prettier', '^2.8.4')
+      .addDevDeps('prettier-plugin-organize-imports', '^3.2.2')
+      .addDevDeps('prettier-plugin-packagejson', '^2.4.2')
+      .writeFileToRoot(
         '.prettierrc.js',
         `
 module.exports = {
@@ -54,17 +31,13 @@ module.exports = {
   ],
 };
 `.trimStart(),
-      );
-      writeNextToPackageJson(
-        pkgPath,
+      )
+      .writeFileToRoot(
         '.prettierignore',
         `
 node_modules
 dist
 `.trimStart(),
       );
-    } else {
-      exitWithError('cant find package.json from current directory');
-    }
   }
 }
