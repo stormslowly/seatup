@@ -2,10 +2,10 @@ lockfileVersion: 5.4
 
 specifiers:
   '@oclif/core': ^2
-  '@oclif/plugin-autocomplete': ^2.1.0
+  '@oclif/plugin-autocomplete': ^2.1.2
   '@oclif/plugin-help': ^5
   '@oclif/plugin-plugins': ^2.3.2
-  '@oclif/test': ^2.3.6
+  '@oclif/test': ^2.3.7
   '@types/chai': ^4
   '@types/mocha': ^9.0.0
   '@types/node': ^16.18.11
@@ -33,7 +33,7 @@ specifiers:
 
 dependencies:
   '@oclif/core': 2.0.8
-  '@oclif/plugin-autocomplete': 2.1.0
+  '@oclif/plugin-autocomplete': 2.1.2
   '@oclif/plugin-help': 5.2.2
   '@oclif/plugin-plugins': 2.3.2
   execa: 5.1.1
@@ -43,7 +43,7 @@ dependencies:
   shelljs: 0.8.5
 
 devDependencies:
-  '@oclif/test': 2.3.6
+  '@oclif/test': 2.3.7
   '@types/chai': 4.3.4
   '@types/mocha': 9.1.1
   '@types/node': 16.18.11
@@ -634,11 +634,44 @@ packages:
       wordwrap: 1.0.0
       wrap-ansi: 7.0.0
 
-  /@oclif/plugin-autocomplete/2.1.0:
-    resolution: {integrity: sha512-0GZAqT0CVu4Chz6FZ0XZwWOyjLI3ZCxpMCED8D3p/eRjnB9F8I+QgNib8hkr9l7BM59S6qvLGGe0w6sv6/nK4A==}
+  /@oclif/core/2.3.1:
+    resolution: {integrity: sha512-18CkjjF16hwhBd/42z+0CHAwvZlBfpyCmdZxpasN/od8c/hdm0oDEJvVB33/xD0LDYg8glKoQ5zVNVvPM/uJ/Q==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@types/cli-progress': 3.11.0
+      ansi-escapes: 4.3.2
+      ansi-styles: 4.3.0
+      cardinal: 2.1.1
+      chalk: 4.1.2
+      clean-stack: 3.0.1
+      cli-progress: 3.12.0
+      debug: 4.3.4_supports-color@8.1.1
+      ejs: 3.1.8
+      fs-extra: 9.1.0
+      get-package-type: 0.1.0
+      globby: 11.1.0
+      hyperlinker: 1.0.0
+      indent-string: 4.0.0
+      is-wsl: 2.2.0
+      js-yaml: 3.14.1
+      natural-orderby: 2.0.3
+      object-treeify: 1.1.33
+      password-prompt: 1.1.2
+      semver: 7.3.8
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      supports-color: 8.1.1
+      supports-hyperlinks: 2.3.0
+      tslib: 2.5.0
+      widest-line: 3.1.0
+      wordwrap: 1.0.0
+      wrap-ansi: 7.0.0
+
+  /@oclif/plugin-autocomplete/2.1.2:
+    resolution: {integrity: sha512-0Ju+SuTPQnEMTQGElTph1K+k8fMUbh5Bd6H91dGfXSXalnl6IFx/7L/ediZlF2kKiGLBSKu7U3xYHFESG8aR2Q==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 2.1.4
+      '@oclif/core': 2.3.1
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 9.1.0
@@ -696,11 +729,11 @@ packages:
       - supports-color
     dev: true
 
-  /@oclif/test/2.3.6:
-    resolution: {integrity: sha512-n1DGbLzGrrfn/Nm2f8829RcQ2iOd9EXDZxx0U9WswpJS75P4N9Py4tYBhfX+wGU7CaJDfYxnqQHB0YuRYDBwrw==}
+  /@oclif/test/2.3.7:
+    resolution: {integrity: sha512-uUm+pYXe3crJVHyih4w7g4wiu8I6LzTxcBUyALVMxn5SWnjhoGa1jvGseMnjbBkmdvh/8re8Z348vBYz/HkSbg==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 2.1.4
+      '@oclif/core': 2.3.1
       fancy-test: 2.0.12
     transitivePeerDependencies:
       - supports-color
@@ -1599,6 +1632,12 @@ packages:
 
   /cli-progress/3.11.2:
     resolution: {integrity: sha512-lCPoS6ncgX4+rJu5bS3F/iCz17kZ9MPZ6dpuTtI0KXKABkhyXIdYB3Inby1OpaGti3YlI3EeEkM9AuWpelJrVA==}
+    engines: {node: '>=4'}
+    dependencies:
+      string-width: 4.2.3
+
+  /cli-progress/3.12.0:
+    resolution: {integrity: sha512-tRkV3HJ1ASwm19THiiLIXLO7Im7wlTuKnvkYaTkyoAPefqjNg7W7DHKUlGRxy9vxDvbyCYQkQozvptuMkGCg8A==}
     engines: {node: '>=4'}
     dependencies:
       string-width: 4.2.3
