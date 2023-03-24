@@ -23,6 +23,6 @@ jobs:
         with:
           node-version: ${{ matrix.node_version }}
           cache: 'pnpm'
-      - run: pnpm i
+      - run: pnpm i --force
       - run: pnpm build
       - run: pnpm test
