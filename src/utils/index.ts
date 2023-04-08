@@ -69,6 +69,15 @@ export class NpmProjectUtil {
     this.updatePkg();
     return this;
   }
+  addScript(name: string, script: string): this {
+    this.pkgJSON.scripts = {
+      ...this.pkgJSON.scripts,
+      [name]: script,
+    };
+    this.updatePkg();
+    return this;
+  }
+
   private updatePkg(): void {
     writeFileSync(this.pkgPath, JSON.stringify(this.pkgJSON, null, 2));
   }
