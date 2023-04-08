@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import { exec } from 'shelljs';
 
 export default class Global extends Command {
-  static description = 'describe the command here';
+  static description = 'setup global gitignore';
 
   static examples = ['<%= config.bin %> <%= command.id %>'];
 

@@ -16,36 +16,104 @@ Seatup
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g oclif-hello-world
-$ oex COMMAND
+$ npm install -g seatup
+$ setup COMMAND
 running command...
-$ oex (--version)
-oclif-hello-world/0.0.0 darwin-x64 node-v16.13.1
-$ oex --help [COMMAND]
+$ setup (--version)
+seatup/1.0.0-alpha.1 darwin-x64 node-v16.14.0
+$ setup --help [COMMAND]
 USAGE
-  $ oex COMMAND
+  $ setup COMMAND
 ...
 ```
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`oex hello PERSON`](#oex-hello-person)
-* [`oex hello world`](#oex-hello-world)
-* [`oex help [COMMAND]`](#oex-help-command)
-* [`oex plugins`](#oex-plugins)
-* [`oex plugins:inspect PLUGIN...`](#oex-pluginsinspect-plugin)
-* [`oex plugins:install PLUGIN...`](#oex-pluginsinstall-plugin)
-* [`oex plugins:link PLUGIN`](#oex-pluginslink-plugin)
-* [`oex plugins:uninstall PLUGIN...`](#oex-pluginsuninstall-plugin)
-* [`oex plugins update`](#oex-plugins-update)
+* [`setup autocomplete [SHELL]`](#setup-autocomplete-shell)
+* [`setup cnpm`](#setup-cnpm)
+* [`setup global`](#setup-global)
+* [`setup hello PERSON`](#setup-hello-person)
+* [`setup hello world`](#setup-hello-world)
+* [`setup help [COMMANDS]`](#setup-help-commands)
+* [`setup prettier`](#setup-prettier)
+* [`setup ts`](#setup-ts)
+* [`setup typescript`](#setup-typescript)
 
-## `oex hello PERSON`
+## `setup autocomplete [SHELL]`
+
+display autocomplete installation instructions
+
+```
+USAGE
+  $ setup autocomplete [SHELL] [-r]
+
+ARGUMENTS
+  SHELL  shell type
+
+FLAGS
+  -r, --refresh-cache  Refresh cache (ignores displaying instructions)
+
+DESCRIPTION
+  display autocomplete installation instructions
+
+EXAMPLES
+  $ setup autocomplete
+
+  $ setup autocomplete bash
+
+  $ setup autocomplete zsh
+
+  $ setup autocomplete --refresh-cache
+```
+
+_See code: [@oclif/plugin-autocomplete](https://github.com/oclif/plugin-autocomplete/blob/v2.1.8/src/commands/autocomplete/index.ts)_
+
+## `setup cnpm`
+
+config NPM registry to China mirror
+
+```
+USAGE
+  $ setup cnpm [-r]
+
+FLAGS
+  -r, --recover  recover npm config from backup file
+
+DESCRIPTION
+  config NPM registry to China mirror
+
+EXAMPLES
+  $ setup cnpm
+
+  $ setup cnpm --recover
+```
+
+_See code: [dist/commands/cnpm.ts](https://github.com/stormslowly/seatup/blob/v1.0.0-alpha.1/dist/commands/cnpm.ts)_
+
+## `setup global`
+
+describe the command here
+
+```
+USAGE
+  $ setup global
+
+DESCRIPTION
+  describe the command here
+
+EXAMPLES
+  $ setup global
+```
+
+_See code: [dist/commands/global.ts](https://github.com/stormslowly/seatup/blob/v1.0.0-alpha.1/dist/commands/global.ts)_
+
+## `setup hello PERSON`
 
 Say hello
 
 ```
 USAGE
-  $ oex hello [PERSON] -f <value>
+  $ setup hello [PERSON] -f <value>
 
 ARGUMENTS
   PERSON  Person to say hello to
@@ -61,187 +129,100 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/oclif/hello-world/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/stormslowly/seatup/blob/v1.0.0-alpha.1/dist/commands/hello/index.ts)_
 
-## `oex hello world`
+## `setup hello world`
 
 Say hello world
 
 ```
 USAGE
-  $ oex hello world
+  $ setup hello world
 
 DESCRIPTION
   Say hello world
 
 EXAMPLES
-  $ oex hello world
+  $ setup hello world
   hello world! (./src/commands/hello/world.ts)
 ```
 
-## `oex help [COMMAND]`
+## `setup help [COMMANDS]`
 
-Display help for oex.
+Display help for setup.
 
 ```
 USAGE
-  $ oex help [COMMAND] [-n]
+  $ setup help [COMMANDS] [-n]
 
 ARGUMENTS
-  COMMAND  Command to show help for.
+  COMMANDS  Command to show help for.
 
 FLAGS
   -n, --nested-commands  Include all nested commands in the output.
 
 DESCRIPTION
-  Display help for oex.
+  Display help for setup.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.10/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.2/src/commands/help.ts)_
 
-## `oex plugins`
+## `setup prettier`
 
-List installed plugins.
+setup prettier basic config
 
 ```
 USAGE
-  $ oex plugins [--core]
+  $ setup prettier [-c <value>] [--skip]
 
 FLAGS
-  --core  Show core plugins.
+  -c, --client=<value>  [default: pnpm] npm client to use
+  --skip                skip package install
 
 DESCRIPTION
-  List installed plugins.
+  setup prettier basic config
 
 EXAMPLES
-  $ oex plugins
+  $ setup prettier
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.0.11/src/commands/plugins/index.ts)_
+_See code: [dist/commands/prettier.ts](https://github.com/stormslowly/seatup/blob/v1.0.0-alpha.1/dist/commands/prettier.ts)_
 
-## `oex plugins:inspect PLUGIN...`
+## `setup ts`
 
-Displays installation properties of a plugin.
-
-```
-USAGE
-  $ oex plugins:inspect PLUGIN...
-
-ARGUMENTS
-  PLUGIN  [default: .] Plugin to inspect.
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Displays installation properties of a plugin.
-
-EXAMPLES
-  $ oex plugins:inspect myplugin
-```
-
-## `oex plugins:install PLUGIN...`
-
-Installs a plugin into the CLI.
+setup basic tsconfig and its utils
 
 ```
 USAGE
-  $ oex plugins:install PLUGIN...
-
-ARGUMENTS
-  PLUGIN  Plugin to install.
-
-FLAGS
-  -f, --force    Run yarn install with force flag.
-  -h, --help     Show CLI help.
-  -v, --verbose
+  $ setup ts
 
 DESCRIPTION
-  Installs a plugin into the CLI.
-
-  Can be installed from npm or a git url.
-
-  Installation of a user-installed plugin will override a core plugin.
-
-  e.g. If you have a core plugin that has a 'hello' command, installing a user-installed plugin with a 'hello' command
-  will override the core plugin implementation. This is useful if a user needs to update core plugin functionality in
-  the CLI without the need to patch and update the whole CLI.
+  setup basic tsconfig and its utils
 
 ALIASES
-  $ oex plugins add
+  $ setup typescript
 
 EXAMPLES
-  $ oex plugins:install myplugin 
-
-  $ oex plugins:install https://github.com/someuser/someplugin
-
-  $ oex plugins:install someuser/someplugin
+  $ setup ts
 ```
 
-## `oex plugins:link PLUGIN`
+_See code: [dist/commands/ts.ts](https://github.com/stormslowly/seatup/blob/v1.0.0-alpha.1/dist/commands/ts.ts)_
 
-Links a plugin into the CLI for development.
+## `setup typescript`
+
+setup basic tsconfig and its utils
 
 ```
 USAGE
-  $ oex plugins:link PLUGIN
-
-ARGUMENTS
-  PATH  [default: .] path to plugin
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
+  $ setup typescript
 
 DESCRIPTION
-  Links a plugin into the CLI for development.
-
-  Installation of a linked plugin will override a user-installed or core plugin.
-
-  e.g. If you have a user-installed or core plugin that has a 'hello' command, installing a linked plugin with a 'hello'
-  command will override the user-installed or core plugin implementation. This is useful for development work.
-
-EXAMPLES
-  $ oex plugins:link myplugin
-```
-
-## `oex plugins:uninstall PLUGIN...`
-
-Removes a plugin from the CLI.
-
-```
-USAGE
-  $ oex plugins:uninstall PLUGIN...
-
-ARGUMENTS
-  PLUGIN  plugin to uninstall
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Removes a plugin from the CLI.
+  setup basic tsconfig and its utils
 
 ALIASES
-  $ oex plugins unlink
-  $ oex plugins remove
-```
+  $ setup typescript
 
-## `oex plugins update`
-
-Update installed plugins.
-
-```
-USAGE
-  $ oex plugins update [-h] [-v]
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Update installed plugins.
+EXAMPLES
+  $ setup typescript
 ```
 <!-- commandsstop -->
