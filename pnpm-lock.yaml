@@ -2,10 +2,10 @@ lockfileVersion: 5.4
 
 specifiers:
   '@oclif/core': ^2
-  '@oclif/plugin-autocomplete': ^2.1.5
+  '@oclif/plugin-autocomplete': ^2.1.8
   '@oclif/plugin-help': ^5
-  '@oclif/plugin-plugins': ^2.3.2
-  '@oclif/test': ^2.3.7
+  '@oclif/plugin-plugins': ^2.4.4
+  '@oclif/test': ^2.3.14
   '@types/chai': ^4
   '@types/mocha': ^9.0.0
   '@types/node': ^16.18.11
@@ -14,7 +14,7 @@ specifiers:
   eslint: ^7.32.0
   eslint-config-oclif: ^4
   eslint-config-oclif-typescript: ^1.0.3
-  eslint-config-prettier: ^8.6.0
+  eslint-config-prettier: ^8.8.0
   eslint-plugin-prettier: ^4.2.1
   execa: ^5
   make-dir: ^3.1.0
@@ -22,7 +22,7 @@ specifiers:
   mocha: ^9
   oclif: ^3
   pkg-up: ^3
-  prettier: ^2.8.4
+  prettier: ^2.8.7
   prettier-plugin-organize-imports: ^3.2.2
   prettier-plugin-packagejson: ^2.4.3
   shelljs: ^0.8.5
@@ -33,9 +33,9 @@ specifiers:
 
 dependencies:
   '@oclif/core': 2.0.8
-  '@oclif/plugin-autocomplete': 2.1.6_iedef3djpnfxdpbmfr4x6l3blq
+  '@oclif/plugin-autocomplete': 2.1.8_iedef3djpnfxdpbmfr4x6l3blq
   '@oclif/plugin-help': 5.2.2
-  '@oclif/plugin-plugins': 2.3.2
+  '@oclif/plugin-plugins': 2.4.4_iedef3djpnfxdpbmfr4x6l3blq
   execa: 5.1.1
   make-dir: 3.1.0
   mk-dir: 1.0.1
@@ -43,7 +43,7 @@ dependencies:
   shelljs: 0.8.5
 
 devDependencies:
-  '@oclif/test': 2.3.7
+  '@oclif/test': 2.3.14_iedef3djpnfxdpbmfr4x6l3blq
   '@types/chai': 4.3.4
   '@types/mocha': 9.1.1
   '@types/node': 16.18.11
@@ -52,13 +52,13 @@ devDependencies:
   eslint: 7.32.0
   eslint-config-oclif: 4.0.0_eslint@7.32.0
   eslint-config-oclif-typescript: 1.0.3_jofidmxrjzhj7l6vknpw5ecvfe
-  eslint-config-prettier: 8.6.0_eslint@7.32.0
-  eslint-plugin-prettier: 4.2.1_2fbugv7hbzbahj5qm3ztcno6by
+  eslint-config-prettier: 8.8.0_eslint@7.32.0
+  eslint-plugin-prettier: 4.2.1_mouiu7tdcm2dtderipseaggmee
   mocha: 9.2.2
   oclif: 3.6.2
-  prettier: 2.8.4
-  prettier-plugin-organize-imports: 3.2.2_silln3pw57har7jydmecgzoypa
-  prettier-plugin-packagejson: 2.4.3_prettier@2.8.4
+  prettier: 2.8.7
+  prettier-plugin-organize-imports: 3.2.2_erhqnhond52bpeyvirmp3gjrp4
+  prettier-plugin-packagejson: 2.4.3_prettier@2.8.7
   shx: 0.3.4
   ts-node: 10.9.1_iedef3djpnfxdpbmfr4x6l3blq
   tslib: 2.5.0
@@ -629,39 +629,6 @@ packages:
       widest-line: 3.1.0
       wordwrap: 1.0.0
       wrap-ansi: 7.0.0
-
-  /@oclif/core/2.3.1:
-    resolution: {integrity: sha512-18CkjjF16hwhBd/42z+0CHAwvZlBfpyCmdZxpasN/od8c/hdm0oDEJvVB33/xD0LDYg8glKoQ5zVNVvPM/uJ/Q==}
-    engines: {node: '>=14.0.0'}
-    dependencies:
-      '@types/cli-progress': 3.11.0
-      ansi-escapes: 4.3.2
-      ansi-styles: 4.3.0
-      cardinal: 2.1.1
-      chalk: 4.1.2
-      clean-stack: 3.0.1
-      cli-progress: 3.12.0
-      debug: 4.3.4_supports-color@8.1.1
-      ejs: 3.1.8
-      fs-extra: 9.1.0
-      get-package-type: 0.1.0
-      globby: 11.1.0
-      hyperlinker: 1.0.0
-      indent-string: 4.0.0
-      is-wsl: 2.2.0
-      js-yaml: 3.14.1
-      natural-orderby: 2.0.3
-      object-treeify: 1.1.33
-      password-prompt: 1.1.2
-      semver: 7.3.8
-      string-width: 4.2.3
-      strip-ansi: 6.0.1
-      supports-color: 8.1.1
-      supports-hyperlinks: 2.3.0
-      tslib: 2.5.0
-      widest-line: 3.1.0
-      wordwrap: 1.0.0
-      wrap-ansi: 7.0.0
     dev: true
 
   /@oclif/core/2.7.1_iedef3djpnfxdpbmfr4x6l3blq:
@@ -704,11 +671,50 @@ packages:
       - typescript
     dev: false
 
-  /@oclif/plugin-autocomplete/2.1.6_iedef3djpnfxdpbmfr4x6l3blq:
-    resolution: {integrity: sha512-/nthZTH/6FNciwgYL1eytFXmBTkEynRRFsYgvMnun8ZRU8VeY74w4tuPM8PB/uKz+4gIweXl2xFNBRD01FoRNg==}
+  /@oclif/core/2.8.0_iedef3djpnfxdpbmfr4x6l3blq:
+    resolution: {integrity: sha512-A2wHItFrD/WOw5bJ6Mtv9MD7If0bsKNR0pwEY0me+fo4HSXlJOtgYGqmzb8t8akX3DUUT7XsjPajsoHLkIJyvg==}
+    engines: {node: '>=14.0.0'}
+    dependencies:
+      '@types/cli-progress': 3.11.0
+      ansi-escapes: 4.3.2
+      ansi-styles: 4.3.0
+      cardinal: 2.1.1
+      chalk: 4.1.2
+      clean-stack: 3.0.1
+      cli-progress: 3.12.0
+      debug: 4.3.4_supports-color@8.1.1
+      ejs: 3.1.8
+      fs-extra: 9.1.0
+      get-package-type: 0.1.0
+      globby: 11.1.0
+      hyperlinker: 1.0.0
+      indent-string: 4.0.0
+      is-wsl: 2.2.0
+      js-yaml: 3.14.1
+      natural-orderby: 2.0.3
+      object-treeify: 1.1.33
+      password-prompt: 1.1.2
+      semver: 7.3.8
+      string-width: 4.2.3
+      strip-ansi: 6.0.1
+      supports-color: 8.1.1
+      supports-hyperlinks: 2.3.0
+      ts-node: 10.9.1_iedef3djpnfxdpbmfr4x6l3blq
+      tslib: 2.5.0
+      widest-line: 3.1.0
+      wordwrap: 1.0.0
+      wrap-ansi: 7.0.0
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - typescript
+
+  /@oclif/plugin-autocomplete/2.1.8_iedef3djpnfxdpbmfr4x6l3blq:
+    resolution: {integrity: sha512-7eUfez+AV5ukiBCuX4iP7L1UW1gY9Ju0+NIi1155klNWPuIjzQGifBQt0Fd8piTaPTkWg/sJUAPvYSxoYBJSOA==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 2.7.1_iedef3djpnfxdpbmfr4x6l3blq
+      '@oclif/core': 2.8.0_iedef3djpnfxdpbmfr4x6l3blq
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 9.1.0
@@ -736,12 +742,12 @@ packages:
       lodash: 4.17.21
     dev: true
 
-  /@oclif/plugin-plugins/2.3.2:
-    resolution: {integrity: sha512-jq/ik7A7bCO/oQp0/Znnpu8/JBXifAQ2OF2KmswbNYt7EpsLqz2DaI/CvkrXRSb+Edzx4Xx3usEgSyocVN/u2A==}
+  /@oclif/plugin-plugins/2.4.4_iedef3djpnfxdpbmfr4x6l3blq:
+    resolution: {integrity: sha512-ieqwznpReiP8ER4Qrkzn084Xp47FLT4gpsUSL/b71o+1QhMqj4sOpLT/XW+Hf1O9zDJg4KyF99Z892FBhNfvVQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@oclif/color': 1.0.4
-      '@oclif/core': 2.1.4
+      '@oclif/core': 2.7.1_iedef3djpnfxdpbmfr4x6l3blq
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 9.1.0
@@ -752,7 +758,11 @@ packages:
       tslib: 2.5.0
       yarn: 1.22.19
     transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
       - supports-color
+      - typescript
     dev: false
 
   /@oclif/plugin-warn-if-update-available/2.0.24:
@@ -770,14 +780,18 @@ packages:
       - supports-color
     dev: true
 
-  /@oclif/test/2.3.7:
-    resolution: {integrity: sha512-uUm+pYXe3crJVHyih4w7g4wiu8I6LzTxcBUyALVMxn5SWnjhoGa1jvGseMnjbBkmdvh/8re8Z348vBYz/HkSbg==}
+  /@oclif/test/2.3.14_iedef3djpnfxdpbmfr4x6l3blq:
+    resolution: {integrity: sha512-F7gYNGGb8b46+ZRTpeS0dpShgZpV/ENPWBIkHSw5xc161hhb8ioQ9wwf84dDfhYuNXYfcwxqA+VSRyqyFz/ITQ==}
     engines: {node: '>=12.0.0'}
     dependencies:
-      '@oclif/core': 2.3.1
-      fancy-test: 2.0.12
+      '@oclif/core': 2.8.0_iedef3djpnfxdpbmfr4x6l3blq
+      fancy-test: 2.0.18
     transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
       - supports-color
+      - typescript
     dev: true
 
   /@octokit/auth-token/2.5.0:
@@ -2107,8 +2121,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-config-prettier/8.6.0_eslint@7.32.0:
-    resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==}
+  /eslint-config-prettier/8.8.0_eslint@7.32.0:
+    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -2193,7 +2207,7 @@ packages:
       semver: 6.3.0
     dev: true
 
-  /eslint-plugin-prettier/4.2.1_2fbugv7hbzbahj5qm3ztcno6by:
+  /eslint-plugin-prettier/4.2.1_mouiu7tdcm2dtderipseaggmee:
     resolution: {integrity: sha512-f/0rXLXUt0oFYs8ra4w49wYZBG5GKZpAYsJSm6rnYL5uVDjd+zowwMwVZHnAjf4edNrKpCDYfXDgmRE/Ak7QyQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -2205,8 +2219,8 @@ packages:
         optional: true
     dependencies:
       eslint: 7.32.0
-      eslint-config-prettier: 8.6.0_eslint@7.32.0
-      prettier: 2.8.4
+      eslint-config-prettier: 8.8.0_eslint@7.32.0
+      prettier: 2.8.7
       prettier-linter-helpers: 1.0.0
     dev: true
 
@@ -2407,8 +2421,8 @@ packages:
       tmp: 0.0.33
     dev: true
 
-  /fancy-test/2.0.12:
-    resolution: {integrity: sha512-S7qVQNaViLTMzn71huZvrUCV59ldq+enQ1EQOkdNbl4q4Om97gwqbYKvZoglsnzCWRRFaFP+qHynpdqaLdiZqg==}
+  /fancy-test/2.0.18:
+    resolution: {integrity: sha512-wA9xzWMJ4L51Jcr9k06koPwi58bbUkTZrqqNYd6z7DHky1jW+D5jc/q86zPmkVdnjOrCg91VOeEzyOjTLIlD8A==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@types/chai': 4.3.4
@@ -4226,7 +4240,7 @@ packages:
       fast-diff: 1.2.0
     dev: true
 
-  /prettier-plugin-organize-imports/3.2.2_silln3pw57har7jydmecgzoypa:
+  /prettier-plugin-organize-imports/3.2.2_erhqnhond52bpeyvirmp3gjrp4:
     resolution: {integrity: sha512-e97lE6odGSiHonHJMTYC0q0iLXQyw0u5z/PJpvP/3vRy6/Zi9kLBwFAbEGjDzIowpjQv8b+J04PDamoUSQbzGA==}
     peerDependencies:
       '@volar/vue-language-plugin-pug': ^1.0.4
@@ -4239,11 +4253,11 @@ packages:
       '@volar/vue-typescript':
         optional: true
     dependencies:
-      prettier: 2.8.4
+      prettier: 2.8.7
       typescript: 4.9.5
     dev: true
 
-  /prettier-plugin-packagejson/2.4.3_prettier@2.8.4:
+  /prettier-plugin-packagejson/2.4.3_prettier@2.8.7:
     resolution: {integrity: sha512-kPeeviJiwy0BgOSk7No8NmzzXfW4R9FYWni6ziA5zc1kGVVrKnBzMZdu2TUhI+I7h8/5Htt3vARYOk7KKJTTNQ==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -4251,13 +4265,13 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 2.8.4
+      prettier: 2.8.7
       sort-package-json: 2.4.1
       synckit: 0.8.5
     dev: true
 
-  /prettier/2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
