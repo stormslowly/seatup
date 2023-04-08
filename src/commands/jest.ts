@@ -36,7 +36,7 @@ import { Config, createConfig } from '@umijs/test';
 export default () => {
   return {
     ...createConfig({
-      target: 'browser',
+      target: 'node',
       jsTransformer: 'esbuild',
       // config opts for esbuild , it will pass to esbuild directly
       jsTransformerOpts: { jsx: 'automatic' },
