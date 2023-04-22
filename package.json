@@ -34,7 +34,7 @@
     "@oclif/core": "^2",
     "@oclif/plugin-autocomplete": "^2.1.8",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.4.4",
+    "@oclif/plugin-plugins": "^2.4.6",
     "execa": "^5",
     "make-dir": "^3.1.0",
     "mk-dir": "^1.0.1",
