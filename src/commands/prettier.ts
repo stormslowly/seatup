@@ -1,5 +1,5 @@
-import {Command} from '@oclif/core';
-import {assert, NpmProjectUtil, pkgUpSync} from '../utils';
+import { Command } from '@oclif/core';
+import { assert, NpmProjectUtil, pkgUpSync } from '../utils';
 
 export default class Prettier extends Command {
   static description = 'setup prettier basic config';
