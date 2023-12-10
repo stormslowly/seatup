@@ -1,0 +1,10 @@
+[package]
+name = "swc_play_ground"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+swc_core = { version = "0.86.33", features = ["__parser", "common", "common_tty", "ecma_ast", "ecma_quote", "ecma_transforms", "ecma_utils", "ecma_visit", "__visit"] }
+

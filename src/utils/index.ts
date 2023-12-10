@@ -9,7 +9,7 @@ export { pkgUpSync };
 
 export function verboseExecSync(file: string, args?: readonly string[]): void {
   execaSync(file, args, {
-    stdout: 'inherit',
+    stdio: 'inherit',
   });
 }
 
