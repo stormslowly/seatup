@@ -2,7 +2,7 @@ import { Command, Flags } from '@oclif/core';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const MIRROR_CONFIG = 'registry=https://registry.npm.taobao.org';
+const MIRROR_CONFIG = 'registry=https://registry.npmmirror.com';
 export default class Cnpm extends Command {
   static description = 'config NPM registry to China mirror';
 
